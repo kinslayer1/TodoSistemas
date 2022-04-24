@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+    <div class="card-header">
+        <h3 class="text-center">Actividades</h3>
+    </div>
+    <div class="body">
+        <table class="table table:hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Fecha y Hora</th>
+                    <th>Dias Retraso</th>
+                    <th>Idempleado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let actividad of actividades" class="text-center">
+                    <td>{{actividad.id}}</td>
+                    <td>{{actividad.nombre}}</td>
+                    <td>{{actividad.estado}}</td>
+                    <td>{{actividad.fecha}}</td>
+                    <td>{{actividad.dias}}</td>
+                    <td>{{actividad.idempleado}}</td>
+                    <td>
+                        <button (click)="Editar(actividad)" class="btn btn-dark" style="margin-left: 10px;">Editar</button>
+                        <button (click)="Delete(actividad)" class="btn btn-info" style="margin-left: 10px;">Borrar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

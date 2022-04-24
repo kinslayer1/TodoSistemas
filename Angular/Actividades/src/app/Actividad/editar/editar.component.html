@@ -1,0 +1,39 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Modificar Datos</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">ID:</label>
+          <input  [(ngModel)]="actividad.id" name="id" id="id" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Nombres:</label>
+          <input [(ngModel)]="actividad.nombre" name="nombre" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">estado:</label>
+          <input [(ngModel)]="actividad.estado" name="estado" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">fecha:</label>
+          <input [(ngModel)]="actividad.fecha" name="fecha" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">dias:</label>
+          <input [(ngModel)]="actividad.dias" name="dias" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">idempleado:</label>
+          <select  (change)="selected($event)" >
+            <option value="0" selected>--Select Empelado--</option>
+            <option *ngFor="let emp of empleados2" value="{{emp.idempleado}}">{{emp.nombre}}</option>
+          </select>
+        </div>        
+        <button (click)="Actualizar(actividad)" class="btn btn-dark">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
